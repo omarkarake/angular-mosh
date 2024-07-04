@@ -9,8 +9,7 @@ import { CourseService } from './course.service';
 export class CourseComponent {
   title = 'angular';
   courses;
-  constructor() {
-    let service = new CourseService();
+  constructor(service: CourseService) {
     this.courses = service.getCouse();
   }
 }
