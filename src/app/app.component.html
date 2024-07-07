@@ -31,10 +31,18 @@
 <p>--------------------------------------------</p>
 
 <div class="selections">
-  <div [class.active]="viewMode == 'selection1'" class="selection1" (click)="viewMode = 'selection1'">
+  <div
+    [class.active]="viewMode == 'selection1'"
+    class="selection1"
+    (click)="viewMode = 'selection1'"
+  >
     selection1
   </div>
-  <div [class.active]="viewMode == 'selection2'" class="selection2" (click)="viewMode = 'selection2'">
+  <div
+    [class.active]="viewMode == 'selection2'"
+    class="selection2"
+    (click)="viewMode = 'selection2'"
+  >
     selection2
   </div>
 </div>
@@ -44,6 +52,13 @@
   <p *ngSwitchCase="'selection2'" class="p2">selection two activated</p>
   <p *ngSwitchDefault class="p2">no Selection</p>
 </div>
+
+<!-- -------------------------------------------------- -->
+
+<ul>
+  <li *ngFor="let course of courses">{{ course.name }}</li>
+</ul>
+
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
 <ul>

@@ -18,7 +18,11 @@ export class AppComponent {
     isFavorite: true,
   };
 
-  courses = [];
+  courses = [
+    { id: 1, name: 'course1' },
+    { id: 2, name: 'course2' },
+    { id: 3, name: 'course3' },
+  ];
   viewMode = 'selection1';
   tweet: tweet = {
     body: 'this is body of the tweet...',
