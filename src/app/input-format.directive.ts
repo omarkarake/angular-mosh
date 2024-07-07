@@ -1,10 +1,10 @@
-import { Directive, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appInputFormat]',
 })
 export class InputFormatDirective {
-  constructor() {}
+  constructor(private el: ElementRef) {}
   @HostListener('focus') onFocus() {
     console.log('focus');
   }
