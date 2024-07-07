@@ -65,7 +65,7 @@
 <p>--------------------------------------------</p>
 
 <button (click)="loadCourse()">Load course</button>
-<input type="text" appInputFormat />
+<input type="text" appInputFormat [format]="'uppercase'" />
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
 <ul>
