@@ -7,6 +7,10 @@ import { AuthorService } from './services/author.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  post = {
+    title: 'title',
+    isFavorite: true,
+  };
   title = 'angular-lecture';
   authors;
   authorLength;
