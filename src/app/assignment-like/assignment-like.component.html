@@ -1,0 +1,10 @@
+<div class="like-behavior">
+  <p
+    class="like"
+    [ngClass]="isSelected ? 'like-default' : 'like-clicked'"
+    (click)="onLikeClick()"
+  >
+    like:
+  </p>
+  <p>{{ like }}</p>
+</div>

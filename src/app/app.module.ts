@@ -11,9 +11,10 @@ import { CourseService } from './course/course.service';
 import { AuthorService } from './services/author.service';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
+import { AssignmentLikeComponent } from './assignment-like/assignment-like.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent],
+  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent, AssignmentLikeComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
   bootstrap: [AppComponent],

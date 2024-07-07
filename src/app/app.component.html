@@ -10,6 +10,11 @@
   </div>
 </panel>
 
+<app-assignment-like
+  [isLikeSelected]="post.isFavorite"
+  (likeChangedLog)="onLikeChange($event)"
+></app-assignment-like>
+
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
 <ul>

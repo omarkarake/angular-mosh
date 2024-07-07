@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthorService } from './services/author.service';
 import { favoriteChangeEventArgs } from './favorite/favorite.component';
-
+import { liked } from './assignment-like/assignment-like.component';
 
 @Component({
   selector: 'app-root',
@@ -22,5 +22,8 @@ export class AppComponent {
   }
   onFavoriteChange(eventArgs: favoriteChangeEventArgs) {
     console.log('Favorite changed: ', eventArgs.newValue);
+  }
+  onLikeChange(eventArgs: liked) {
+    console.log(eventArgs);
   }
 }

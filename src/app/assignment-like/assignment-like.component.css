@@ -1,0 +1,15 @@
+.like-behavior {
+  display: flex;
+}
+
+.like {
+  cursor: pointer;
+}
+
+.like-default {
+  background-color: #ccc;
+}
+
+.like-clicked {
+  background-color: deeppink;
+}
