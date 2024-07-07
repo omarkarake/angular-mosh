@@ -15,10 +15,13 @@
   (likeChangedLog)="onLikeChange($event)"
 ></app-assignment-like>
 
-<app-like
-  [likeCount]="tweet.likedCount"
-  [isLiked]="tweet.isLiked"
-></app-like>
+<app-like [likeCount]="tweet.likedCount" [isLiked]="tweet.isLiked"></app-like>
+
+<p>--------------------------------------------</p>
+
+<div *ngIf="courses.length > 0; then isCourses; else noCourses"></div>
+<ng-template #isCourses>Courses available</ng-template>
+<ng-template #noCourses>No courses available</ng-template>
 
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
