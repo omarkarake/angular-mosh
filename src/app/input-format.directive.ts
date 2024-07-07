@@ -9,6 +9,7 @@ export class InputFormatDirective {
     console.log('focus');
   }
   @HostListener('blur') onBlur() {
-    console.log('blur');
+    let value: string = this.el.nativeElement.value;
+    this.el.nativeElement.value = value.toUpperCase();
   }
 }
