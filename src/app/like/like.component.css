@@ -1,0 +1,16 @@
+.like {
+  display: flex;
+  gap: 5px;
+}
+
+.initial-style {
+  cursor: pointer;
+}
+
+.liked {
+  background-color: deeppink;
+}
+
+.disliked {
+  background-color: #ccc;
+}

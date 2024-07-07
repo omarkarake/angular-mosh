@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { AuthorService } from './services/author.service';
 import { favoriteChangeEventArgs } from './favorite/favorite.component';
 import { liked } from './assignment-like/assignment-like.component';
-
+interface tweet {
+  body: string;
+  isLiked: boolean;
+  likedCount: number;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +16,12 @@ export class AppComponent {
   post = {
     title: 'title',
     isFavorite: true,
+  };
+
+  tweet: tweet = {
+    body: 'this is body of the tweet...',
+    isLiked: false,
+    likedCount: 10,
   };
   title = 'angular-lecture';
   authors;

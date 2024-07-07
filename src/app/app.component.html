@@ -15,6 +15,11 @@
   (likeChangedLog)="onLikeChange($event)"
 ></app-assignment-like>
 
+<app-like
+  [likeCount]="tweet.likedCount"
+  [isLiked]="tweet.isLiked"
+></app-like>
+
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
 <ul>
