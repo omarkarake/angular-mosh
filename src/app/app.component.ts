@@ -18,4 +18,7 @@ export class AppComponent {
     this.authors = author.getAuthor();
     this.authorLength = this.authors.length;
   }
+  onFavoriteChange(){
+    console.log("Favorite changed");
+  }
 }
