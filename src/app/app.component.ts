@@ -18,7 +18,7 @@ export class AppComponent {
     isFavorite: true,
   };
 
-  courses = [onlikeChange()];
+  courses = [];
 
   tweet: tweet = {
     body: 'this is body of the tweet...',
