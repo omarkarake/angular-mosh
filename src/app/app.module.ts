@@ -10,9 +10,10 @@ import { CourseComponent } from './course/course.component';
 import { CourseService } from './course/course.service';
 import { AuthorService } from './services/author.service';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, FavoriteComponent],
+  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
   bootstrap: [AppComponent],

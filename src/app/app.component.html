@@ -1,6 +1,14 @@
-<app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favorite>
-
-
+<app-favorite
+  [isFavorite]="post.isFavorite"
+  (change)="onFavoriteChange($event)"
+></app-favorite>
+<panel>
+  <div class="heading">Heading</div>
+  <div class="body">
+    <h1>Body</h1>
+    <p>some content here...</p>
+  </div>
+</panel>
 
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
