@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // import { EventEmitter } from 'node:stream';
 
+
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
@@ -15,4 +16,8 @@ export class FavoriteComponent implements OnInit {
     this.isSelected = !this.isSelected;
     this.change.emit({newValue: this.isSelected});
   }
+}
+
+export interface favoriteChangeEventArgs {
+  newValue: boolean;
 }
