@@ -1,0 +1,15 @@
+.selections {
+  display: flex;
+  gap: 10px;
+}
+
+.active{
+    background-color: deeppink;
+}
+
+.selection1 {
+  cursor: pointer;
+}
+.selection2 {
+  cursor: pointer;
+}

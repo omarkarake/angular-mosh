@@ -23,11 +23,27 @@
 <ng-template #isCourses>Courses available</ng-template>
 <ng-template #noCourses>No courses available</ng-template>
 
-<p>----------------------------------------------</p>
+<p>--------------------------------------------</p>
 
 <div [hidden]="courses.length === 0">Courses available</div>
 <div [hidden]="courses.length > 0">No courses available</div>
 
+<p>--------------------------------------------</p>
+
+<div class="selections">
+  <div [class.active]="viewMode == 'selection1'" class="selection1" (click)="viewMode = 'selection1'">
+    selection1
+  </div>
+  <div [class.active]="viewMode == 'selection2'" class="selection2" (click)="viewMode = 'selection2'">
+    selection2
+  </div>
+</div>
+
+<div [ngSwitch]="viewMode">
+  <p *ngSwitchCase="'selection1'" class="p1">selection one activated</p>
+  <p *ngSwitchCase="'selection2'" class="p2">selection two activated</p>
+  <p *ngSwitchDefault class="p2">no Selection</p>
+</div>
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
 <ul>

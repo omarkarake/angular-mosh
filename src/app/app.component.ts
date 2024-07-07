@@ -19,7 +19,7 @@ export class AppComponent {
   };
 
   courses = [];
-
+  viewMode = 'selection1';
   tweet: tweet = {
     body: 'this is body of the tweet...',
     isLiked: false,
