@@ -13,6 +13,6 @@ export class FavoriteComponent implements OnInit {
   ngOnInit(): void {}
   onClick() {
     this.isSelected = !this.isSelected;
-    this.change.emit();
+    this.change.emit({newValue: this.isSelected});
   }
 }

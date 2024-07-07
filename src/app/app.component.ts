@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthorService } from './services/author.service';
 
+interface favoriteChangeEventArgs {
+  newValue: boolean;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +22,7 @@ export class AppComponent {
     this.authors = author.getAuthor();
     this.authorLength = this.authors.length;
   }
-  onFavoriteChange(){
-    console.log("Favorite changed");
+  onFavoriteChange(eventArgs: favoriteChangeEventArgs) {
+    console.log('Favorite changed: ', eventArgs.newValue);
   }
 }
