@@ -42,4 +42,13 @@ export class AppComponent {
   onLikeChange(eventArgs: liked) {
     console.log(eventArgs);
   }
+
+  addCourse() {
+    this.courses.push({ id: 4, name: 'course4' });
+  }
+
+  removeCourse(selectedCourse: any) {
+    let index = this.courses.indexOf(selectedCourse);
+    this.courses.splice(index, 1);
+  }
 }
