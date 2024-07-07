@@ -18,11 +18,7 @@ export class AppComponent {
     isFavorite: true,
   };
 
-  courses = [
-    { id: 1, name: 'course1' },
-    { id: 2, name: 'course2' },
-    { id: 3, name: 'course3' },
-  ];
+  courses: any;
   viewMode = 'selection1';
   tweet: tweet = {
     body: 'this is body of the tweet...',
@@ -50,5 +46,15 @@ export class AppComponent {
   removeCourse(selectedCourse: any) {
     let index = this.courses.indexOf(selectedCourse);
     this.courses.splice(index, 1);
+  }
+  loadCourse() {
+    this.courses = [
+      { id: 1, name: 'course1' },
+      { id: 2, name: 'course2' },
+      { id: 3, name: 'course3' },
+    ];
+  }
+  trackCourse(course: any) {
+    return course ? course.id : undefined;
   }
 }

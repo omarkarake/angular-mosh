@@ -56,10 +56,14 @@
 <!-- -------------------------------------------------- -->
 <button (click)="addCourse()">Add Course</button>
 <ul>
-  <li *ngFor="let course of courses; even as isEven">
+  <li *ngFor="let course of courses; trackBy: trackCourse; even as isEven">
     {{ course.name }} <span *ngIf="isEven">(EVEN)</span><button (click)="removeCourse(course)">remove</button>
   </li>
 </ul>
+
+<p>--------------------------------------------</p>
+
+<button (click)="loadCourse()">Load course</button>
 
 <!-- <app-course />
 <h1>{{ authors.length }} Authors</h1>
