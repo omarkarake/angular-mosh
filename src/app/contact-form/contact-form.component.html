@@ -1,23 +1,37 @@
 <form>
-  <!-- when we use for in label and give it the id of input, when we Click it's gonna focus input -->
+  <!-- When we use for in label and give it the id of input, when we click it's gonna focus input -->
   <div>
-    <label for="firstName">firstName</label
-    ><input
-      required=""
+    <label for="firstName">First Name</label>
+    <input
+      required
       ngModel
       name="firstName"
+      minlength="3"
+      maxlength="10"
+      pattern="banana"
       #firstName="ngModel"
       (change)="log(firstName)"
       id="firstName"
       type="text"
     />
     <div *ngIf="firstName.touched && !firstName.valid">
-      first name is required
+      <div *ngIf="firstName.errors?.['required']">First name is required</div>
+      <div *ngIf="firstName.errors?.['minlength']">
+        First name should be minimum
+        {{firstName.errors?.['minlength'].requiredLength}} characters
+      </div>
+      <div *ngIf="firstName.errors?.['maxlength']">
+        First name should be maximum
+        {{firstName.errors?.['maxlength'].requiredLength}} characters
+      </div>
+      <div *ngIf="firstName.errors?.['pattern']">
+        First name must match 'banana'
+      </div>
     </div>
   </div>
   <div>
-    <label for="comments">comments</label
-    ><input ngModel name="comments" id="comments" type="text" />
+    <label for="comments">Comments</label>
+    <input ngModel name="comments" id="comments" type="text" />
   </div>
   <button>Submit</button>
 </form>
