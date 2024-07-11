@@ -36,5 +36,12 @@
     <label for="comments">Comments</label>
     <input ngModel name="comments" id="comments" type="text" />
   </div>
+  <div>
+    <label>
+      <input ngModel name="isSubscribed" type="checkbox" />Subscribe to mailing
+      list
+    </label>
+  </div>
+  <p>{{ f.value | json }}</p>
   <button [disabled]="!f.valid">Submit</button>
 </form>
