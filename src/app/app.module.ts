@@ -14,9 +14,10 @@ import { PanelComponent } from './panel/panel.component';
 import { AssignmentLikeComponent } from './assignment-like/assignment-like.component';
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent, AssignmentLikeComponent, LikeComponent, InputFormatDirective],
+  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent, AssignmentLikeComponent, LikeComponent, InputFormatDirective, ZippyComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
   bootstrap: [AppComponent],
