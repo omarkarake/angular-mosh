@@ -1,10 +1,19 @@
 <form>
   <!-- when we use for in label and give it the id of input, when we Click it's gonna focus input -->
   <div>
-    <label for="firstName">firstName</label><input id="firstName" type="text" />
+    <label for="firstName">firstName</label
+    ><input
+      ngModel
+      name="firstName"
+      #firstName="ngModel"
+      (change)="log(firstName)"
+      id="firstName"
+      type="text"
+    />
   </div>
   <div>
-    <label for="comments">comments</label><input id="comments" type="text" />
+    <label for="comments">comments</label
+    ><input ngModel name="comments" id="comments" type="text" />
   </div>
   <button>Submit</button>
 </form>

@@ -16,10 +16,11 @@ import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent, AssignmentLikeComponent, LikeComponent, InputFormatDirective, ZippyComponent, ContactFormComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
   bootstrap: [AppComponent],
 })
