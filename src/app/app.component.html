@@ -1,4 +1,4 @@
-<app-favorite
+<!-- <app-favorite
   [isFavorite]="post.isFavorite"
   (change)="onFavoriteChange($event)"
 ></app-favorite>
@@ -53,7 +53,7 @@
   <p *ngSwitchDefault class="p2">no Selection</p>
 </div>
 
-<!-- -------------------------------------------------- -->
+--------------------------------------------------
 <button (click)="addCourse()">Add Course</button>
 <ul>
   <li *ngFor="let course of courses; trackBy: trackCourse; even as isEven">
@@ -68,7 +68,7 @@
 <input type="text" [appInputFormat]="'uppercase'" />
 
 <p>--------------------------------------------</p>
-<zippy [title]="title">Shipping Detail Content</zippy>
+<zippy [title]="title">Shipping Detail Content</zippy> -->
 <!-- <zippy title="Billing Details">Billing Detail Content</zippy> -->
 
 <!-- <app-course />
@@ -76,3 +76,5 @@
 <ul>
   <li *ngFor="let author of authors">{{author}}</li>
 </ul> -->
+
+<app-contact-form />
