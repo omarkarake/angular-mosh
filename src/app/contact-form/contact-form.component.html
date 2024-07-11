@@ -1,4 +1,4 @@
-<form>
+<form #f="ngForm" (ngSubmit)="submit(f)">
   <!-- When we use for in label and give it the id of input, when we click it's gonna focus input -->
   <div>
     <label for="firstName">First Name</label>
@@ -6,7 +6,7 @@
     class="inputs"
       required
       ngModel
-      name="firstName"
+      name="firstName" 
       minlength="3"
       maxlength="10"
       pattern="banana"
