@@ -36,5 +36,5 @@
     <label for="comments">Comments</label>
     <input ngModel name="comments" id="comments" type="text" />
   </div>
-  <button>Submit</button>
+  <button [disabled]="!f.valid">Submit</button>
 </form>
