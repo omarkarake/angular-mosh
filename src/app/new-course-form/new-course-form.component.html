@@ -30,10 +30,15 @@
   </div>
   <div>
     <label for="moneyBackGuarantee">
-      <input ngModel name="hasMoneyBackGuarantee" type="checkbox" id="moneyBackGuarantee" />
+      <input
+        ngModel
+        name="hasMoneyBackGuarantee"
+        type="checkbox"
+        id="moneyBackGuarantee"
+      />
       30-day money-back-guarantee?
     </label>
   </div>
   <p>{{ f.value | json }}</p>
-  <button>Create</button>
+  <button [disabled]="f.invalid">Create</button>
 </form>
