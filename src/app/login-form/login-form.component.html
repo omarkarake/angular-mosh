@@ -5,7 +5,11 @@
       <input formControlName="username" type="text" id="username" />
     </label>
     <div *ngIf="username?.touched && username?.invalid">
-      Username is required
+      <div *ngIf="username?.errors?.['required']">Username is required</div>
+      <div *ngIf="username?.errors?.['minlength']">
+        Username is should be minimum
+        {{username?.errors?.['minlength'].requiredLength}} characters
+      </div>
     </div>
   </div>
   <div>
