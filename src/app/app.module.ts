@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { NewCourseComponentComponent } from './new-course-component/new-course-component.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NewCourseComponentComponent } from './new-course-component/new-course-c
     NewCourseFormComponent,
     LoginFormComponent,
     NewCourseComponentComponent,
+    ChangePasswordComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
