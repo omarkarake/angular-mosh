@@ -42,6 +42,17 @@
       list
     </label>
   </div>
+  <div>
+    <label for="contactMethod">Contact Method</label>
+    <select ngModel name="contactMethod" id="contactMethod">
+      <!-- if we want to select multiple, we can add multiple attribute to the select -->
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [value]="method.id">
+        <!-- if you want to send complex object you [ngValue]="method" otherwise [value] -->
+        {{ method.name }}
+      </option>
+    </select>
+  </div>
   <p>{{ f.value | json }}</p>
   <button [disabled]="!f.valid">Submit</button>
 </form>
