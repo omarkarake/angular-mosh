@@ -1,0 +1,20 @@
+<form>
+  <div>
+    <label for="name"></label>
+    <input type="text" id="name" />
+  </div>
+  <div>
+    <label for="category">Category</label>
+    <select name="" id="category">
+      <option value=""></option>
+      <option *ngFor="let c of categories" [value]="c.id">{{ c.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="moneyBackGuarantee">
+      <input type="checkbox" id="moneyBackGuarantee" />
+      30-day money-back-guarantee?
+    </label>
+  </div>
+  <button>Create</button>
+</form>
