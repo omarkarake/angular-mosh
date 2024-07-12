@@ -1,7 +1,22 @@
 <form>
   <div>
     <label for="name"></label>
-    <input type="text" id="name" />
+    <input
+      required
+      minlength="3"
+      ngModel
+      name="name"
+      #name="ngModel"
+      type="text"
+      id="name"
+    />
+    <div *ngIf="name.touched && name.invalid">
+      <div *ngIf="name.errors?.['required']">Name field is required</div>
+      <div *ngIf="name.errors?.['minlength']">
+        Name field should be at least
+        {{name.errors?.['minlength'].requiredLength}} characters
+      </div>
+    </div>
   </div>
   <div>
     <label for="category">Category</label>
