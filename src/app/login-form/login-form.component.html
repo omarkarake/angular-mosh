@@ -1,9 +1,8 @@
 <form [formGroup]="form">
   <div>
-    <label for="username">
-      Username
-      <input formControlName="username" type="text" id="username" />
-    </label>
+    <label for="username">Username</label>
+    <input formControlName="username" type="text" id="username" />
+    <div *ngIf="username?.pending">Checking for uniqueness...</div>
     <div *ngIf="username?.touched && username?.invalid">
       <div *ngIf="username?.errors?.['required']">Username is required</div>
       <div *ngIf="username?.errors?.['minlength']">
