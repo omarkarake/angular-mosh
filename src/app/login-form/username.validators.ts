@@ -7,11 +7,15 @@ export class UsernameValidators {
       return { cannotContainSpace: true };
     return null;
   }
-  static shouldbeUnique(Control: AbstractControl): ValidationErrors | null {
-    setTimeout(() => {
-      if ((Control.value as string) === 'mosh') return { shouldbeUnique: true };
-      return null;
-    }, 2000);
-    return null;
+  static shouldbeUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (control.value === 'mosh')
+          resolve({
+            shouldbeUnique: true,
+          });
+        else resolve(null);
+      }, 2000);
+    });
   }
 }
