@@ -1,0 +1,6 @@
+<form action="">
+  <input type="text" (keyup.enter)="addTopic(topic)" #topic />
+  <ul>
+    <li *ngFor="let topic of topics?.controls">{{ topic.value }}</li>
+  </ul>
+</form>
