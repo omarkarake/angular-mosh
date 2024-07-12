@@ -4,6 +4,9 @@
       Username
       <input formControlName="username" type="text" id="username" />
     </label>
+    <div *ngIf="username?.touched && username?.invalid">
+      Username is required
+    </div>
   </div>
   <div>
     <label for="password">
