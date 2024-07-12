@@ -4,29 +4,31 @@
     <!-- <div *ngIf="form.errors.-----">----</div> -->
     <!-- <div *ngIf="form.errors.-----">----</div> -->
 </div>
-  <div>
-    <label for="username">Username</label>
-    <input formControlName="username" type="text" id="username" />
-    <div *ngIf="username?.pending">Checking for uniqueness...</div>
-    <div *ngIf="username?.touched && username?.invalid">
-      <div *ngIf="username?.errors?.['required']">Username is required</div>
-      <div *ngIf="username?.errors?.['minlength']">
-        Username is should be minimum
-        {{username?.errors?.['minlength'].requiredLength}} characters
+  <div formGroupName="account">
+      <div>
+        <label for="username">Username</label>
+        <input formControlName="username" type="text" id="username" />
+        <div *ngIf="username?.pending">Checking for uniqueness...</div>
+        <div *ngIf="username?.touched && username?.invalid">
+          <div *ngIf="username?.errors?.['required']">Username is required</div>
+          <div *ngIf="username?.errors?.['minlength']">
+            Username is should be minimum
+            {{username?.errors?.['minlength'].requiredLength}} characters
+          </div>
+          <div *ngIf="username?.errors?.['cannotContainSpace']">
+            Username cannot contain space
+          </div>
+          <div *ngIf="username?.errors?.['shouldbeUnique']">
+            Username is already taken
+          </div>
+        </div>
       </div>
-      <div *ngIf="username?.errors?.['cannotContainSpace']">
-        Username cannot contain space
+      <div>
+        <label for="password">
+          Password
+          <input formControlName="password" type="text" id="password" />
+        </label>
       </div>
-      <div *ngIf="username?.errors?.['shouldbeUnique']">
-        Username is already taken
-      </div>
-    </div>
-  </div>
-  <div>
-    <label for="password">
-      Password
-      <input formControlName="password" type="text" id="password" />
-    </label>
   </div>
   <button>Login</button>
 </form>
