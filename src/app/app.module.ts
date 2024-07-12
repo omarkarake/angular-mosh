@@ -3,6 +3,7 @@ import {
   BrowserModule,
   provideClientHydration,
 } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,8 +22,20 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, FavoriteComponent, PanelComponent, AssignmentLikeComponent, LikeComponent, InputFormatDirective, ZippyComponent, ContactFormComponent, NewCourseFormComponent, LoginFormComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    CourseComponent,
+    FavoriteComponent,
+    PanelComponent,
+    AssignmentLikeComponent,
+    LikeComponent,
+    InputFormatDirective,
+    ZippyComponent,
+    ContactFormComponent,
+    NewCourseFormComponent,
+    LoginFormComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideClientHydration(), CourseService, AuthorService],
   bootstrap: [AppComponent],
 })
