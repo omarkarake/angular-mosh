@@ -7,4 +7,11 @@ export class UsernameValidators {
       return { cannotContainSpace: true };
     return null;
   }
+  static shouldbeUnique(Control: AbstractControl): ValidationErrors | null {
+    setTimeout(() => {
+      if ((Control.value as string) === 'mosh') return { shouldbeUnique: true };
+      return null;
+    }, 2000);
+    return null;
+  }
 }
